@@ -19,7 +19,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/carlosrocha/react-data-components"
+    "url": "https://github.com/sean-johnson/react-data-components"
   },
   "dependencies": {
     "lodash": "^4.13.1"
