@@ -106,12 +106,12 @@ export default class Table extends Component {
         sortProps = buildSortProps(col, sortBy, onSort);
         order = sortProps['aria-sort'];
       }
-
+      console.log(col)
       return (
         <th
           ref={c => this._headers[idx] = c}
           key={idx}
-          style={{width: col.width}}
+          style={col.headerStyle}
           role="columnheader"
           scope="col"
           {...sortProps}>
@@ -129,7 +129,7 @@ export default class Table extends Component {
       return (
         <tr key={getKeys(row)} {...trProps}>
           {columns.map((col, i) =>
-            <td key={i} className={getCellClass(col, row)}>
+            <td key={i} style={col.headerStyle} className={getCellClass(col, row)}>
               {getCellValue(col, row)}
             </td>
           )}
@@ -139,16 +139,12 @@ export default class Table extends Component {
 
     return (
       <table {...otherProps}>
-        {!sortBy ? null :
-          <caption className="sr-only" role="alert" aria-live="polite">
-            {`Sorted by ${sortBy.prop}: ${sortBy.order} order`}
-          </caption>}
-        <thead>
+        <thead className="header-table">
           <tr>
             {headers}
           </tr>
         </thead>
-        <tbody>
+        <tbody className="body-table">
           {rows.length ? rows :
             <tr>
               <td colSpan={columns.length} className="text-center">No data</td>

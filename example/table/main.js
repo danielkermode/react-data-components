@@ -9,12 +9,29 @@ function buildTable(data) {
         Google Maps
       </a>;
 
+
   const tableColumns = [
-    { title: 'Name', prop: 'name' },
-    { title: 'City', prop: 'city' },
-    { title: 'Street address', prop: 'street' },
-    { title: 'Phone', prop: 'phone', defaultContent: '<no phone>' },
-    { title: 'Map', render: renderMapUrl, className: 'text-center' },
+    { title: 'Name', prop: 'name', headerstyle:
+      {
+        backgroundColor: 'red'
+      }
+    },
+    { title: 'City', prop: 'city', headerstyle:
+      {
+        backgroundColor: 'yellow'
+      }},
+    { title: 'Street address', prop: 'street', headerstyle:
+      {
+        backgroundColor: 'blue'
+      }},
+    { title: 'Phone', prop: 'phone', defaultContent: '<no phone>', headerstyle:
+      {
+        backgroundColor: 'green'
+      }},
+    { title: 'Map', render: renderMapUrl, className: 'text-center', headerstyle:
+      {
+        backgroundColor: 'gray'
+      }},
   ];
 
   return (
