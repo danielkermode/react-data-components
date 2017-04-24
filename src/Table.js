@@ -115,9 +115,10 @@ export default class Table extends Component {
           role="columnheader"
           scope="col"
           {...sortProps}>
-          <span>{col.title}</span>
-          {!order ? null :
+          <div>
+            {col.title} {!order ? null :
             <span className={`sort-icon sort-${order}`} aria-hidden="true" />}
+          </div>
         </th>
       );
     });
@@ -146,9 +147,9 @@ export default class Table extends Component {
         </thead>
         <tbody className="body-table">
           {rows.length ? rows :
-            <tr>
-              <td colSpan={columns.length} className="text-center">No data</td>
-            </tr>}
+            <div className="no-data-container">
+              <div className="no-data">No data</div>
+            </div>}
         </tbody>
       </table>
     );
