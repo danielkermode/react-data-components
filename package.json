@@ -22,7 +22,10 @@
     "url": "https://github.com/sean-johnson/react-data-components"
   },
   "dependencies": {
-    "lodash": "^4.13.1"
+    "better-react-spinkit": "^2.0.0-6",
+    "css-loader": "^0.28.0",
+    "lodash": "^4.13.1",
+    "style-loader": "^0.16.1"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0-0"

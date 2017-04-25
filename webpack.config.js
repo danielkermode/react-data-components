@@ -30,6 +30,10 @@ module.exports = {
           plugins: ['lodash'],
         },
       },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      }
     ],
   },
   plugins: [

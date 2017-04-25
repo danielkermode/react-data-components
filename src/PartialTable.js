@@ -7,7 +7,7 @@ export default class PartialTable extends Component {
   render() {
     const {
       onFilter, onPageSizeChange, onPageNumberChange, onSort,
-      pageLengthOptions, columns, keys, buildRowOptions,
+      pageLengthOptions, columns, keys, buildRowOptions, isFetching
     } = this.props;
 
     const {
@@ -60,6 +60,7 @@ export default class PartialTable extends Component {
           buildRowOptions={buildRowOptions}
           sortBy={sortBy}
           onSort={onSort}
+          isFetching={isFetching}
         />
       </div>
     );

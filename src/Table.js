@@ -1,4 +1,5 @@
 import React, {PropTypes, Component} from 'react';
+import { ThreeBounce } from 'better-react-spinkit';
 
 const simpleGet = key => data => data[key];
 const keyGetter = keys => data => keys.map(key => data[key]);
@@ -96,7 +97,7 @@ export default class Table extends Component {
   render() {
     const {
       columns, keys, buildRowOptions, sortBy,
-      onSort, dataArray, ...otherProps,
+      onSort, dataArray, isFetching, ...otherProps,
     } = this.props;
 
     const headers = columns.map((col, idx) => {
@@ -106,7 +107,6 @@ export default class Table extends Component {
         sortProps = buildSortProps(col, sortBy, onSort);
         order = sortProps['aria-sort'];
       }
-      console.log(col)
       return (
         <th
           ref={c => this._headers[idx] = c}
@@ -116,7 +116,7 @@ export default class Table extends Component {
           scope="col"
           {...sortProps}>
           <div>
-            {col.title} {!order ? null :
+            {col.title}{!order ? null :
             <span className={`sort-icon sort-${order}`} aria-hidden="true" />}
           </div>
         </th>
@@ -146,6 +146,7 @@ export default class Table extends Component {
           </tr>
         </thead>
         <tbody className="body-table">
+          {isFetching && <ThreeBounce scaleEnd={0.8} size={15} color='#0077FF'/>}
           {rows.length ? rows :
             <div className="no-data-container">
               <div className="no-data">No data</div>
