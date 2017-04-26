@@ -146,10 +146,13 @@ export default class Table extends Component {
           </tr>
         </thead>
         <tbody className="body-table">
-          {isFetching && <ThreeBounce scaleEnd={0.8} size={15} color='#0077FF'/>}
+          {isFetching &&
+            <div className="no-data-container">
+              <ThreeBounce scaleEnd={0.8} size={15} color='#0077FF'/>
+            </div>}
           {rows.length ? rows :
             <div className="no-data-container">
-              <div className="no-data">No data</div>
+              <div className="no-data">No data for this date.</div>
             </div>}
         </tbody>
       </table>
