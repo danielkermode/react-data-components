@@ -42,7 +42,6 @@ export default class PartialTable extends Component {
                     {opt === 0 ? 'All' : opt}
                   </option>
                 )}
-                <i className="material-icons">search</i>
               </select>
             </div>
           </div>
