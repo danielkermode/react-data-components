@@ -1,0 +1,206 @@
+.table th {
+  cursor: pointer;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.table .empty-cell {
+  font-style: italic;
+  color: darkgray;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.sort-icon:after {
+  float: right;
+  color: hsl(20, 0%, 70%);
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.sort-icon.sort-ascending:after  { content: '\f0de'; }
+.sort-icon.sort-descending:after { content: '\f0dd'; }
+.sort-icon.sort-none:after  { content: '\f0dc'; }
+
+
+
+/* ------------------------NEW STYLING - SEAN--------------------------*/
+
+textarea:focus, input:focus, a:focus, select:focus {
+    outline: none;
+}
+
+.container {
+  padding: 0;
+  border: 1px solid #D0D2D3;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.table {
+  margin: 0;
+}
+
+.top-bar-contents {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  background-color: #EFF2F4;
+  border-radius: 4px 4px 0 0;
+  color: #546676;
+}
+
+.left-half-row {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.right-half-row {
+  height: 100%;
+  width: 50%;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.search-bar-container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.page-size-container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 15px;
+}
+
+#search-field {
+  height: 100%;
+  width: 200px;
+  border-radius: 0 25px 25px 0;
+  border: 1px solid #D0D2D3;
+  border-width: 1px 1px 1px 0px;
+  padding-left: 5px;
+  transition: all 0.3s;
+}
+
+#search-field:focus {
+  color: #0077FF;
+  background-color: #F9F9F9;
+}
+
+.search-icon-container {
+  height: 100%;
+  border-radius: 25px 0 0 25px;
+  border: 1px solid #D0D2D3;
+  border-width: 1px 0px 1px 1px;
+  background-color: #FFFFFF;
+  padding-left: 6px;
+  padding-right: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon {
+  color: #D0D2D3;
+  font-size: 18px;
+}
+
+.page-size-text {
+  height: 100%;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #D0D2D3;
+  border-width: 1px 0px 1px 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+select#page-menu  {
+  color: #546676;
+  background-color: #EFF2F4;
+  height: 100%;
+  width: 60px;
+  border-radius: 0 4px 4px 0;
+  border: 1px solid #D0D2D3;
+  transition: all 0.3s;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-appearance: none;
+}
+
+select#page-menu:hover {
+  background-color: #DFE0E2;
+  color: #333E48;
+  cursor: pointer;
+}
+
+.pagination {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.pagination>li>a:hover {
+  background-color: #DFE0E2;
+  color: #333E48;
+  border-color: #D0D2D3;
+  transition: all 0.3s;
+}
+
+.pagination>li>a, .pagination>li>span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  color: #546676;
+  text-decoration: none;
+  background-color: #EFF2F4;
+  border: 1px solid #D0D2D3;
+  transition: all 0.3s;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+  color: #fff;
+  cursor: default;
+  background-color: #0D97FF;
+  border-color: #0077FF;
+  transition: all 0.3s;
+}
+
+.pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover {
+  color: #546676;
+  cursor: default;
+  background-color: #EFF2F4;
+  border-color: #D0D2D3;
+}

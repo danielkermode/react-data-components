@@ -17,10 +17,21 @@ export default class PartialTable extends Component {
 
     return (
       <div className="container">
-        <div className="row">
-          <div className="col-xs-4">
-            <div>
-              <label htmlFor="page-menu">Page size:</label>
+        <div className="top-bar-contents">
+          <div className="left-half-row">
+            <div className="search-bar-container">
+              <div className="search-icon-container">
+                <i className="search-icon material-icons">search</i>
+              </div>
+              <input
+                id="search-field"
+                type="search"
+                value={filterValues.globalSearch}
+                onChange={onFilter.bind(null, 'globalSearch')}
+              />
+            </div>
+            <div className="page-size-container">
+              <div className="page-size-text" htmlFor="page-menu">Page size</div>
               <select
                 id="page-menu"
                 value={pageSize}
@@ -31,21 +42,13 @@ export default class PartialTable extends Component {
                     {opt === 0 ? 'All' : opt}
                   </option>
                 )}
+                <i className="material-icons">search</i>
               </select>
             </div>
-            <div>
-              <label htmlFor="search-field">Search:</label>
-              <input
-                id="search-field"
-                type="search"
-                value={filterValues.globalSearch}
-                onChange={onFilter.bind(null, 'globalSearch')}
-              />
-            </div>
           </div>
-          <div className="col-xs-8">
+          <div className="right-half-row">
             <Pagination
-              className="pagination pull-right"
+              className="pagination"
               currentPage={pageNumber}
               totalPages={totalPages}
               onChangePage={onPageNumberChange}

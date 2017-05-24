@@ -152,7 +152,7 @@ export default class Table extends Component {
             </div>}
           {rows.length ? rows :
             <div className="no-data-container">
-              <div className="no-data">No data for this date.</div>
+              <div className="no-data">Huh, no data here...</div>
             </div>}
         </tbody>
       </table>
