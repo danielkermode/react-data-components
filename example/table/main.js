@@ -13,24 +13,24 @@ function buildTable(data) {
   const tableColumns = [
     { title: 'Name', prop: 'name', headerstyle:
       {
-        backgroundColor: 'red'
+        width: '20%'
       }
     },
     { title: 'City', prop: 'city', headerstyle:
       {
-        backgroundColor: 'yellow'
+        width: '20%'
       }},
     { title: 'Street address', prop: 'street', headerstyle:
       {
-        backgroundColor: 'blue'
+        width: '20%'
       }},
     { title: 'Phone', prop: 'phone', defaultContent: '<no phone>', headerstyle:
       {
-        backgroundColor: 'green'
+        width: '20%'
       }},
     { title: 'Map', render: renderMapUrl, className: 'text-center', headerstyle:
       {
-        backgroundColor: 'gray'
+        width: '20%'
       }},
   ];
 

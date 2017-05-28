@@ -130,7 +130,7 @@ export default class Table extends Component {
       return (
         <tr key={getKeys(row)} {...trProps}>
           {columns.map((col, i) =>
-            <td key={i} style={col.headerStyle} className={getCellClass(col, row)}>
+            <td key={i} style={col.headerStyle}>
               {getCellValue(col, row)}
             </td>
           )}
